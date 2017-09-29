@@ -1,4 +1,4 @@
-import User from './models/User';
+import User from './../models/User';
 import Route from '@mirana/fox/dist/routing/Route';
 
 let route = new Route();

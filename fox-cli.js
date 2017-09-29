@@ -133,7 +133,7 @@ function createApplication (name, path) {
   }
 
   // JavaScript
-  var app = loadTemplate('js/app.js')
+  var app = loadTemplate('app.js')
 
   // App modules
   app.locals.modules = Object.create(null)

@@ -1,5 +1,5 @@
 {
-  "name": "fox-generator",
+  "name": "@mirana/fox-generator",
   "description": "Fox application generator",
   "version": "0.1.0-alpha.4",
   "author": "Mirana Co. <info@miranaco.com>",
@@ -50,7 +50,7 @@
   },
   "files": [
     "LICENSE",
-    "fox-cli.js"
+    "templates/"
   ],
   "scripts": {
     "lint": "eslint ."

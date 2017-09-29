@@ -12,9 +12,6 @@ import index from './routes/index';
 var <%- variable %> = require('<%- modules[variable] %>');
 <% }); -%>
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-
 var app = new Fox({
   protocol: 'http',
   hostname: '127.0.0.1',
