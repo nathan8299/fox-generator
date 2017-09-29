@@ -1,0 +1,46 @@
+import Fox from '@mirana/fox';
+import logger from '@mirana/fox/dist/middleware/logger';
+import param from '@mirana/fox/dist/middleware/param';
+import Body from '@mirana/fox/dist/middleware/Body';
+import Auth from '@mirana/fox/dist/middleware/Auth';
+import fs from 'fs';
+import path from 'path';
+import User from './models/User';
+import users from './routes/users';
+import index from './routes/index';
+<% Object.keys(modules).forEach(function (variable) { -%>
+var <%- variable %> = require('<%- modules[variable] %>');
+<% }); -%>
+
+var index = require('./routes/index');
+var users = require('./routes/users');
+
+var app = new Fox({
+  protocol: 'http',
+  hostname: '127.0.0.1',
+  port: 3000,
+});
+
+app.use(logger);
+
+app.use(param);
+app.use(new Body());
+
+// uncomment for authentication
+//app.use(new Auth({
+//  expiry: '1d',
+//  algorithm: 'RS512',
+//  privateKey: fs.readFileSync(path.join(__dirname, 'private.key')),
+//  publicKey: fs.readFileSync(path.join(__dirname, 'public.pem')),
+//  model: User,
+//  username: 'email',
+//}));
+
+<% uses.forEach(function (use) { -%>
+app.use(<%- use %>);
+<% }); -%>
+
+app.use(index);
+app.use(users);
+
+app.exec();

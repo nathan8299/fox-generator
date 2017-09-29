@@ -1,0 +1,54 @@
+{
+  "name": "fox-generator",
+  "description": "Fox application generator",
+  "version": "0.1.0-alpha.4",
+  "author": "Mirana Co. <info@miranaco.com>",
+  "contributors": [
+    "Ardalan Amini <a.amini@miranaco.com>"
+  ],
+  "keywords": [
+    "fox",
+    "framework",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api"
+  ],
+  "repository": "expressjs/generator",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "2.11.0",
+    "ejs": "2.5.7",
+    "mkdirp": "0.5.1",
+    "sorted-object": "2.0.1"
+  },
+  "main": "fox-cli.js",
+  "preferGlobal": true,
+  "bin": {
+    "fox": "./fox-cli.js"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "mocha": "2.5.3",
+    "rimraf": "2.5.4",
+    "supertest": "1.2.0",
+    "tree-kill": "1.2.0",
+    "validate-npm-package-name": "2.2.2"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "files": [
+    "LICENSE",
+    "fox-cli.js"
+  ],
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
