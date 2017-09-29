@@ -15,8 +15,12 @@
     "app",
     "api"
   ],
-  "repository": "expressjs/generator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiranaCo/fox-generator.git"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/MiranaCo/fox-generator#readme",
   "dependencies": {
     "commander": "2.11.0",
     "ejs": "2.5.7",
