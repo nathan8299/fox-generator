@@ -1,7 +1,7 @@
 {
   "name": "@mirana/fox-generator",
   "description": "Fox application generator",
-  "version": "0.1.0-alpha.6.1",
+  "version": "0.1.0-alpha.6.2",
   "author": "Mirana Co. <info@miranaco.com>",
   "contributors": [
     "Ardalan Amini <a.amini@miranaco.com>"
