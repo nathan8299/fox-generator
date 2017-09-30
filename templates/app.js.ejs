@@ -2,6 +2,7 @@ import Fox from '@mirana/fox';
 import logger from '@mirana/fox/dist/middleware/logger';
 import param from '@mirana/fox/dist/middleware/param';
 import Body from '@mirana/fox/dist/middleware/Body';
+import File from '@mirana/fox/dist/middleware/File';
 import Auth from '@mirana/fox/dist/middleware/Auth';
 import fs from 'fs';
 import path from 'path';
@@ -18,6 +19,7 @@ app.use(logger);
 
 app.use(param);
 app.use(new Body());
+app.use(new File());
 
 // uncomment for authentication
 //app.use(new Auth({

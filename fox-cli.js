@@ -167,7 +167,7 @@ function createApplication (name, path) {
         start: 'babel-node ./app.js',
       },
       dependencies: {
-        'fox': '0.1.0-alpha.5',
+        'fox': '0.1.0-alpha.6',
         'core-decorators': '^0.20.0',
       },
       devDependencies: {
