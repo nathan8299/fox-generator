@@ -12,11 +12,7 @@ import index from './routes/index';
 var <%- variable %> = require('<%- modules[variable] %>');
 <% }); -%>
 
-var app = new Fox({
-  protocol: 'http',
-  hostname: '127.0.0.1',
-  port: 3000,
-});
+var app = new Fox();
 
 app.use(logger);
 
@@ -25,12 +21,9 @@ app.use(new Body());
 
 // uncomment for authentication
 //app.use(new Auth({
-//  expiry: '1d',
-//  algorithm: 'RS512',
-//  privateKey: fs.readFileSync(path.join(__dirname, 'private.key')),
-//  publicKey: fs.readFileSync(path.join(__dirname, 'public.pem')),
 //  model: User,
 //  username: 'email',
+//  expiry: '1d',
 //}));
 
 <% uses.forEach(function (use) { -%>
