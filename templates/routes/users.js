@@ -1,7 +1,7 @@
+import {routing} from '@mirana/fox';
 import User from './../models/User';
-import Route from '@mirana/fox/dist/routing/Route';
 
-let route = new Route();
+let route = new routing.Route();
 
 route.get('/users', (req, res, next) => {
   User.find((err, users) => {

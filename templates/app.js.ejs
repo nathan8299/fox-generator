@@ -1,9 +1,4 @@
-import Fox from '@mirana/fox';
-import logger from '@mirana/fox/dist/middleware/logger';
-import param from '@mirana/fox/dist/middleware/param';
-import Body from '@mirana/fox/dist/middleware/Body';
-import File from '@mirana/fox/dist/middleware/File';
-import Auth from '@mirana/fox/dist/middleware/Auth';
+import Fox, {middleware} from '@mirana/fox';
 import fs from 'fs';
 import path from 'path';
 import User from './models/User';
@@ -15,14 +10,14 @@ var <%- variable %> = require('<%- modules[variable] %>');
 
 var app = new Fox();
 
-app.use(logger);
+app.use(middleware.logger);
 
-app.use(param);
-app.use(new Body());
-app.use(new File());
+app.use(middleware.param);
+app.use(new middleware.Body());
+app.use(new middleware.File());
 
 // uncomment for authentication
-//app.use(new Auth({
+//app.use(new middleware.Auth({
 //  model: User,
 //  username: 'email',
 //  expiry: '1d',

@@ -1,10 +1,10 @@
-import Model from '@mirana/fox/dist/database/Model';
+import {database} from '@mirana/fox';
 
 /**
  *
- * @extends Model
+ * @extends database.Model
  */
-class User extends Model {
+class User extends database.Model {
   static schema = {
     email: String,
     password: String,
