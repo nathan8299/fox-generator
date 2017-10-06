@@ -147,11 +147,6 @@ function createApplication (name, path) {
       complete()
     })
 
-    mkdir(path + '/config', function () {
-      copyTemplate('config/auth.js', path + '/config/auth.js')
-      complete()
-    })
-
     mkdir(path + '/routes', function () {
       copyTemplate('routes/index.js', path + '/routes/index.js')
       copyTemplate('routes/users.js', path + '/routes/users.js')
@@ -167,7 +162,7 @@ function createApplication (name, path) {
         start: 'babel-node ./app.js',
       },
       dependencies: {
-        'fox': '0.1.0-alpha.7.1',
+        'fox': '0.1.0-alpha.8',
         'core-decorators': '^0.20.0',
       },
       devDependencies: {

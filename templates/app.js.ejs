@@ -23,6 +23,18 @@ app.use(new middleware.File());
 //  expiry: '1d',
 //}));
 
+// simple middleware
+//app.use((req, res, next) => {
+//    // do something...
+//    next();
+//});
+
+// middleware with scope
+//app.use('/scope', (req, res, next) => {
+//    // do something...
+//    next();
+//});
+
 <% uses.forEach(function (use) { -%>
 app.use(<%- use %>);
 <% }); -%>
